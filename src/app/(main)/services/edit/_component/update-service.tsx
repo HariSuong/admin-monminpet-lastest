@@ -12,7 +12,9 @@ import Switch from '@mui/material/Switch'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 
-import TinyMCEEditor from '@/components/tiny-mce'
+// import TinyMCEEditor from '@/components/tiny-mce'
+import TinyMCEEditor from '@/components/editor'
+
 import { useToast } from '@/contexts/toast-context'
 
 import Grid from '@mui/material/Grid'

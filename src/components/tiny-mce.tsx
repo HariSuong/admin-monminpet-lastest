@@ -1,5 +1,5 @@
 // src/components/tiny-mce.tsx
-
+'use client'
 import { useToast } from '@/contexts/toast-context'
 import productApiRequest from '@/services/apiProducts'
 import { Editor } from '@tinymce/tinymce-react'

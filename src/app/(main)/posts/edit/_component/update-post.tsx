@@ -12,7 +12,9 @@ import Switch from '@mui/material/Switch'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 
-import TinyMCEEditor from '@/components/tiny-mce'
+// import TinyMCEEditor from '@/components/tiny-mce'
+import TinyMCEEditor from '@/components/editor'
+
 import { useToast } from '@/contexts/toast-context'
 import {
   PostItem,
@@ -27,6 +29,7 @@ import { useRouter } from 'next/navigation'
 import ImageUploadBox from '@/components/posts/image-upload-box'
 import postApiRequest from '@/services/apiPosts'
 import { MenuItem } from '@/schemaValidations/menus.schema'
+
 const UpdatePostForm = ({
   post,
   initialMenus

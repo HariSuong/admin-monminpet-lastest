@@ -15,7 +15,9 @@ import Slider from '@mui/material/Slider'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 
-import TinyMCEEditor from '@/components/tiny-mce'
+// import TinyMCEEditor from '@/components/tiny-mce'
+import TinyMCEEditor from '@/components/editor'
+
 import { useToast } from '@/contexts/toast-context'
 import {
   CreateProductBody,
@@ -42,6 +44,7 @@ import { MenuItem } from '@/schemaValidations/menus.schema'
 import { MenuSelectType } from '@/components/posts/menu-select'
 import { FaqItem } from '@/schemaValidations/faq.schema'
 import FaqSelect, { FaqItemType } from '@/components/products/faq-select'
+
 const AddProductForm = ({
   initialFaqs,
   initialMenus,

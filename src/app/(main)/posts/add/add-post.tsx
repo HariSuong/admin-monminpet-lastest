@@ -13,7 +13,9 @@ import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import LinearProgress from '@mui/material/LinearProgress'
 
-import TinyMCEEditor from '@/components/tiny-mce'
+// import TinyMCEEditor from '@/components/tiny-mce'
+import TinyMCEEditor from '@/components/editor'
+
 import { useToast } from '@/contexts/toast-context'
 import {
   CreatePostBody,
@@ -153,8 +155,8 @@ const AddPostForm = ({ initialMenus }: { initialMenus: MenuItem[] }) => {
                   seoScore >= 80
                     ? 'success'
                     : seoScore >= 50
-                    ? 'warning'
-                    : 'error'
+                      ? 'warning'
+                      : 'error'
                 }
               />
             </Box>
@@ -166,8 +168,8 @@ const AddPostForm = ({ initialMenus }: { initialMenus: MenuItem[] }) => {
               const color = isGood
                 ? 'success.main'
                 : isBad
-                ? 'error.main'
-                : 'warning.main'
+                  ? 'error.main'
+                  : 'warning.main'
               return (
                 <Typography key={idx} variant='body2' sx={{ color }}>
                   {line}

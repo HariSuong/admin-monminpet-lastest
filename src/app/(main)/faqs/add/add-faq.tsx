@@ -17,7 +17,8 @@ import { useToast } from '@/contexts/toast-context'
 
 import { useRouter } from 'next/navigation'
 
-import TinyMCEEditor from '@/components/tiny-mce'
+// import TinyMCEEditor from '@/components/tiny-mce'
+import TinyMCEEditor from '@/components/editor'
 import {
   CreateFaqBody,
   CreateFaqBodyType
