@@ -49,7 +49,7 @@ const request = async <Response>(
   url: string,
   method: 'GET' | 'POST' | 'PUT' | 'DELETE',
   options?: CustomOptions | undefined,
-  timeout = 30000
+  timeout = 120000
 ) => {
   const controller = new AbortController()
   const timeoutId = setTimeout(() => controller.abort(), timeout)

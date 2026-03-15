@@ -48,6 +48,11 @@ const ImageUploadBox: React.FC<Props> = ({
       })
     } finally {
       setLoading(false)
+      // ✅ FIX 1: Reset lại input.
+      // Nếu không có dòng này, khi bạn kia up lỗi xong, muốn click up lại ĐÚNG tấm ảnh đó, trình duyệt sẽ coi là không có sự thay đổi (onChange không kích hoạt) -> Nút bấm sẽ bị "liệt".
+      if (fileInputRef.current) {
+        fileInputRef.current.value = ''
+      }
     }
   }
 
@@ -76,12 +81,12 @@ const ImageUploadBox: React.FC<Props> = ({
       </Box>
 
       <Button
+        type='button' // ✅ FIX 2: CỰC KỲ QUAN TRỌNG. Button nằm trong Form mặc định sẽ là submit form. Nếu không có dòng này, mỗi khi click "Tải ảnh lên" nó sẽ âm thầm văng lỗi Validation của bài viết.
         variant='contained'
         startIcon={<CloudUploadIcon />}
         onClick={() => fileInputRef.current?.click()}
         // loading={loading}
-        // disabled={loading}
-      >
+        disabled={loading}>
         {loading ? 'Đang tải ảnh...' : 'Tải ảnh lên'}
       </Button>
 
